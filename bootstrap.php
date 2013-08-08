@@ -9,22 +9,9 @@
  * 		If not, see <http://www.gnu.org/licenses/>.
  * @copyright Copyright 2013 t
  */
+namespace Cocktail\Block;
 
-/**
- * This shall be a meaningful comment
- */
-return array(
-	'Block' => array(
-		'version' => '1.01',
-		'localRoot' => realpath(dirname(__FILE__) . '/..'),
-		'namespace' => 'Cocktail\Block',
-	),
-	'View' => array(
-		'classname' => '\ViewBasic',
-		'templatePath' => \Camarera::CONF_AUTO,
-		'templates' => array(
-			'Block/BlockLoginbox.html',
-			'BlockLoginboxLoggedin.html',
-		),
-	)
-);
+// @todo remove composer hack after composer libs cleared
+if (!defined('CL_ROOT')) return;
+
+\Camarera::loadConf('Block', realpath(dirname(__FILE__)) . '/conf/conf.php');

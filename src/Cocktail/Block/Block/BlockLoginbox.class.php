@@ -47,7 +47,7 @@ class BlockLoginboxLoginValidator extends \ModelValidator {
  */
 class BlockLoginbox extends \BlockHmvc {
 
-	protected $_template = 'BlockLoginbox/Block/BlockLoginbox.html';
+	protected $_template = 'Block/BlockLoginbox.html';
 
 	/**
 	 * use this to set the login form action
