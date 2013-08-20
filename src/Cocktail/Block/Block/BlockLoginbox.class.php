@@ -93,9 +93,9 @@ class BlockLoginbox extends \BlockHmvc {
 		$success = $Auth->driverLoginByLoginPassword($Input->login, $Input->password, $Input->stayloggedin);
 
 		$ret = $success
-			? \View::get('BlockLoginbox/BlockLoginboxLoggedin.html')
+			? \View::build('BlockLoginbox/BlockLoginboxLoggedin.html')
 				->set('User', $Auth->driverGetUser())
-			: \View::get('BlockLoginbox/BlockLoginbox.html');
+			: \View::build('BlockLoginbox/BlockLoginbox.html');
 		return $ret;
 	}
 
